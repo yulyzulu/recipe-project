@@ -102,11 +102,20 @@ h3 {
   padding-right: 5px;
 }
 
+.loading {
+  display: flex;
+}
+
 /* Recipe */
 .recipe-card {
   width: 75%;
   margin: 1.5rem;
+  background: var(--blue-color);
 }
+/* .recipe-card h3 {
+  color: white;
+} */
+
 .item-recipe {
   list-style: none;
   padding: 3px;
@@ -145,9 +154,13 @@ h3 {
   text-align: center;
 }
 
-/* .close-modal {
-
-} */
+.modal-close-button {
+  background: white;
+  color: var(--main-color);
+  border: none;
+  padding: 4px;
+  font-weight: bold;
+}
 
 /* Comments */
 

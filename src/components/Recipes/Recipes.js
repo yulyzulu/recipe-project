@@ -41,18 +41,32 @@ const Recipes = () => {
         <h2 data-testid="header-recipes" >Recipes</h2>
         <p>Write the main ingredient or ingredients of the recipe you want</p>
         <form className="search-form" onSubmit={getQuery} >
-          <input className="search-bar" type="text" aria-label="recipe" value={search} data-testid="search-bar" onChange={updateSearch} aria-required="true" required></input>
+          <input
+            className="search-bar"
+            type="text"
+            aria-label="recipe"
+            value={search}
+            data-testid="search-bar"
+            onChange={updateSearch}
+            aria-required="true"
+            required></input>
           <button className="search-button" type="submit" data-testid="search-button" >Search</button>
         </form>
-        <ul className="row list-recipes">
-          { recipes && recipes.length > 0 ?
-            recipes.map((recipe) => (
-              <li className="col-3 item-recipe" key={recipe.recipe.label}>
-                <Recipe title={recipe.recipe.label} image={recipe.recipe.image} ingredients={recipe.recipe.ingredients} url={recipe.recipe.url} />
-            </li>
-            )) : <span className="loading">{results}</span>
+        {recipes && recipes.length > 0 ?
+          <ul className="row list-recipes">
+            { recipes.map((recipe, index) => (
+                <li className="col-3 item-recipe" key={recipe.recipe.url}>
+                  < Recipe
+                    title={recipe.recipe.label}
+                    image={recipe.recipe.image}
+                    ingredients={recipe.recipe.ingredients}
+                    url={recipe.recipe.url}
+                  />
+              </li>
+              ))
+            }
+          </ul> : <span className="loading">{results}</span>
           }
-        </ul>
 
       </section>
     </main>

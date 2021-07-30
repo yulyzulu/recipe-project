@@ -13,11 +13,11 @@ const FavoriteRecipes = (props) => {
         <header>
           <h2 className="header-favorite-recipes" data-testid="header-recipes">My favorite recipes</h2>
         </header>
-        { myFavoriteRecipes.length > 0 ?
+        { myFavoriteRecipes && myFavoriteRecipes.length > 0 ?
         <ul className="row list-recipes">
-            { myFavoriteRecipes.length > 0 &&
+            {
               myFavoriteRecipes.map((recipe) => (
-                <li className="col-3 item-recipe" key={recipe.recipeInfo.title} >
+                <li className="col-3 item-recipe" key={recipe.id} >
                   <Recipe
                     id={recipe.id}
                     title={recipe.recipeInfo.title}

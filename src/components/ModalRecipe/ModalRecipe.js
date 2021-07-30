@@ -5,7 +5,7 @@ import { addFavoriteRecipe, deleteFavoriteRecipe } from '../../actions';
 import Comments from '../Comments/Comments';
 
 const ModalRecipe = (props) => {
-  const { id, title, image, ingredients, url, comment, showModal, handleCloseModal } = props;
+  const { id, title, image, ingredients, url, comment, comments, showModal, handleCloseModal } = props;
 
   const addRecipe = (e) => {
     //console.log(ingredients);
@@ -26,8 +26,11 @@ const ModalRecipe = (props) => {
 
   return (
     <Modal show={showModal} onHide={handleCloseModal} animation={false} >
-      <Modal.Header className="close-modal" closeButton>
+      <Modal.Header className="close-modal" >
         <Modal.Title>{title}</Modal.Title>
+          <button type="button" className="modal-close-button top-0 right-0" onClick={handleCloseModal}>
+            <span>X</span>
+          </button>
       </Modal.Header>
       <Modal.Body>
         <div className="img-modal">
@@ -46,7 +49,7 @@ const ModalRecipe = (props) => {
         <h4>Recipe</h4>
         <a href={url} target="blank" >Visit the recipe website </a>
         {
-          comment && <Comments />
+          comment && <Comments id={id} comments={comments}/>
         }
 
       </Modal.Body>

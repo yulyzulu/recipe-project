@@ -11,6 +11,16 @@ const reducer = (state, action) => {
         ...state,
         myFavoriteRecipes: state.myFavoriteRecipes.filter(item => item.id !== action.recipeId),
       }
+    case 'ADD_COMMENT_FAVORITE_RECIPE':
+      console.log('add comment', action.payload.id);
+      return {
+        ...state,
+        myFavoriteRecipes: state.myFavoriteRecipes.map((recipe) => recipe.id === action.payload.id ?
+        {...recipe, recipeInfo: {
+          ...recipe.recipeInfo, comments: [...recipe.recipeInfo.comments, action.payload.comment]
+         }}: recipe
+        )
+      }
     default:
       return state;
   }
