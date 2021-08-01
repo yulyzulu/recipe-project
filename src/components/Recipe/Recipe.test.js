@@ -1,5 +1,6 @@
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import Recipe from './Recipe';
+//import Modal from './Modal';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from '../../reducers';
@@ -12,6 +13,7 @@ import reducer from '../../reducers';
 // });
 
 afterEach(cleanup);
+
 const initialState = {
   myFavoriteRecipes: [
     {
@@ -43,9 +45,15 @@ const renderComponentWithRedux = (component,
     )};
 };
 
-describe("Test the Favorite Recipes Component", () => {
-  test("Check the header text is correct", () => {
+describe("Recipe Component", () => {
+  test("Check if recipe component exist", () => {
     const recipeElement = renderComponentWithRedux(<Recipe />, initialState);
     expect(recipeElement).toBeTruthy();
+  });
+
+  test("Validate clic open modal", () => {
+    const { getByTestId } = renderComponentWithRedux(<Recipe />, initialState);
+    fireEvent.click(getByTestId('card'));
+    expect(getByTestId('my-modal')).toBeTruthy();
   });
 });

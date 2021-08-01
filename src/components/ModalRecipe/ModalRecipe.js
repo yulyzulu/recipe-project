@@ -8,7 +8,6 @@ const ModalRecipe = (props) => {
   const { id, title, image, ingredients, url, comment, comments, showModal, handleCloseModal } = props;
 
   const addRecipe = (e) => {
-    //console.log(ingredients);
     props.addFavoriteRecipe({
       title,
       image,
@@ -25,8 +24,8 @@ const ModalRecipe = (props) => {
   };
 
   return (
-    <Modal show={showModal} onHide={handleCloseModal} animation={false} >
-      <Modal.Header className="close-modal" >
+    <Modal data-testid="my-modal" show={showModal} onHide={handleCloseModal} animation={false} >
+      <Modal.Header data-testid="close-my-modal" className="close-modal" >
         <Modal.Title>{title}</Modal.Title>
           <button type="button" className="modal-close-button top-0 right-0" onClick={handleCloseModal}>
             <span>X</span>
@@ -54,10 +53,10 @@ const ModalRecipe = (props) => {
 
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={handleCloseModal} >Close</Button>
+        <Button data-testid="close-modal" onClick={handleCloseModal} >Close</Button>
         {
-          comment ? <Button onClick={() => deleteRecipe(id)}>Delete Recipe</Button>:
-          <Button onClick={addRecipe}>Add Favorites</Button>
+          comment ? <Button data-testid="delete-button" onClick={() => deleteRecipe(id)}>Delete Recipe</Button>:
+          <Button data-testid="add-button" onClick={addRecipe}>Add Favorites</Button>
         }
       </Modal.Footer>
     </Modal>

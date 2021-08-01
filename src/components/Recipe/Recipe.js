@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-//import { connect } from 'react-redux';
 import ModalRecipe from '../ModalRecipe/ModalRecipe';
 
 const Recipe = ({ id, title, image, ingredients, url, comment, comments }) => {
@@ -11,7 +10,7 @@ const Recipe = ({ id, title, image, ingredients, url, comment, comments }) => {
 
   return (
     <>
-      <button className="card recipe-card" onClick={() => handleShowModal()} >
+      <button className="card recipe-card" data-testid="card" onClick={() => handleShowModal()} >
         <img className="card-img-top img-card" src={image} alt={`${title}-Recipe`} />
         <div className="card-body">
           <h3>{title}</h3>

@@ -17,9 +17,15 @@ const Recipes = () => {
   }, [query]);
 
   const getRecipes = async () => {
-    const result = await Axios.get(url);
-    setRecipes(result.data.hits);
-    console.log(recipes);
+    try {
+      const result = await Axios.get(url);
+      setRecipes(result.data.hits);
+      console.log(recipes);
+    }
+    catch (error) {
+      console.log('Error', error.message);
+      setResults('Error')
+    }
   };
 
   const updateSearch = (e) => {
@@ -36,10 +42,12 @@ const Recipes = () => {
   };
 
   return (
-    <main className="container">
+    <main className="container main">
       <section className="search-section">
-        <h2 data-testid="header-recipes" >Recipes</h2>
-        <p>Write the main ingredient or ingredients of the recipe you want</p>
+        <header>
+          <h2 data-testid="header-recipes" >Recipes</h2>
+        </header>
+        <p className="recipes-text">Write the main ingredient or ingredients of the recipe you want</p>
         <form className="search-form" onSubmit={getQuery} >
           <input
             className="search-bar"
@@ -53,7 +61,7 @@ const Recipes = () => {
           <button className="search-button" type="submit" data-testid="search-button" >Search</button>
         </form>
         {recipes && recipes.length > 0 ?
-          <ul className="row list-recipes">
+          <ul className="row list-recipes" data-testid="recipe-list">
             { recipes.map((recipe, index) => (
                 <li className="col-3 item-recipe" key={recipe.recipe.url}>
                   < Recipe
@@ -65,7 +73,7 @@ const Recipes = () => {
               </li>
               ))
             }
-          </ul> : <span className="loading">{results}</span>
+          </ul> : <span className="loading" data-testid="loading">{results}</span>
           }
 
       </section>

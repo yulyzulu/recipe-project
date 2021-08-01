@@ -8,7 +8,7 @@ const FavoriteRecipes = (props) => {
   console.log(myFavoriteRecipes);
 
   return (
-    <main className="container">
+    <main className="container main">
       <section className="favorite-recipes-section">
         <header>
           <h2 className="header-favorite-recipes" data-testid="header-recipes">My favorite recipes</h2>

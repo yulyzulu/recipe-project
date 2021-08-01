@@ -14,14 +14,16 @@ const Comments = (props) => {
   }
 
   const addCommentToRecipe = (e) => {
-    console.log(id);
-    console.log(newComment);
-    props.addCommentFavoriteRecipe({
-      id: id,
-      comments: comments,
-      comment: newComment,
-    });
-    setNewComment('');
+    e.preventDefault();
+    if (newComment) {
+      props.addCommentFavoriteRecipe({
+        id: id,
+        comments: comments,
+        comment: newComment,
+      });
+      setNewComment('');
+      //console.log(comments)
+    }
   };
 
   return (
@@ -30,8 +32,8 @@ const Comments = (props) => {
       {
         comments ?
         <ul>
-          {comments.map((comment) => (
-            <li>{comment}</li>
+          {comments.map((comment, index) => (
+            <li key={index}>{comment}</li>
           ))}
         </ul>: ""
       }

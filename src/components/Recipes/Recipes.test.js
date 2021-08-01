@@ -10,9 +10,16 @@ describe("Test the Recipes Component", () => {
 
 describe("Test the search button", () => {
   test("Validate the search button exist", () => {
-    const { getByTestId } = render(<Recipes />);
+    const { getByTestId, getByText } = render(<Recipes />);
     expect(getByTestId("search-button")).toBeTruthy();
+    expect(getByText('Search')).toBeTruthy();
   });
+
+  // test('Validate click and the return of the api', () => {
+  //   const { getByTestId } = render(<Recipes />);
+  //   fireEvent.click(getByTestId('search-button'));
+  //   expect(getByTestId('recipe-list')).toBeTruthy();
+  // })
 
   // test("Validate click in the search button", () => {
   //   const { getByTestId } = render(<Recipes />);
@@ -26,10 +33,12 @@ describe("Test input in the search bar", () => {
     expect(getByTestId("search-bar")).toBeTruthy();
   });
 
-  test("Validate input onChange", () => {
+  test("Validate input onChange and loading", () => {
     const { getByTestId } = render(<Recipes />);
     const input = getByTestId('search-bar');
     fireEvent.change(input, { target: { value: "chicken"}});
     expect(input.value).toBe("chicken");
+    fireEvent.click(getByTestId('search-button'));
+    expect(getByTestId('loading')).toBeTruthy();
   });
 });
