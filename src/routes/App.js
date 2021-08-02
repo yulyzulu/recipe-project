@@ -9,14 +9,14 @@ import NotFound from '../components/NotFound/NotFound';
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Layout>
+      <Layout>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/recipes" component={Recipes} />
           <Route exact path="/favorites" component={FavoriteRecipes} />
-        </Layout>
-        <Route component={NotFound} />
-      </Switch>
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
     </BrowserRouter>
   );
 };

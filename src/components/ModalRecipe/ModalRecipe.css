@@ -1,0 +1,42 @@
+/* Modal Recipe */
+
+.modal-recipe-list {
+  color: black;
+}
+
+.img-modal {
+  text-align: center;
+}
+
+.modal-close-button {
+  background: white;
+  color: var(--main-color);
+  border: none;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.modal-image-recipe {
+  border-radius: 20%;
+}
+
+.add-delete-button {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: white;
+}
+
+.add-delete-button:hover {
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+.close-button {
+  background-color: var(--blue-gray-color);
+  border: 1px solid var(--blue-gray-color);
+  color: var(--main-color);
+}
+
+.close-button:hover {
+  background-color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}

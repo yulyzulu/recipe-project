@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Recipe.css';
+
 import ModalRecipe from '../ModalRecipe/ModalRecipe';
 
 const Recipe = ({ id, title, image, ingredients, url, comment, comments }) => {

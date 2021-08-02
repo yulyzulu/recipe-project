@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import Recipe from '../Recipe/Recipe';
+import './Recipes.css';
 import { APP_ID, APP_KEY } from '../keys';
 
 const Recipes = () => {
@@ -30,14 +31,12 @@ const Recipes = () => {
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
-    // console.log(search);
   };
 
   const getQuery = (e) => {
     e.preventDefault();
     setQuery(search);
     setSearch('');
-    //console.log(recipes);
     setResults('Loading...');
   };
 
@@ -47,7 +46,9 @@ const Recipes = () => {
         <header>
           <h2 data-testid="header-recipes" >Recipes</h2>
         </header>
-        <p className="recipes-text">Write the main ingredient or ingredients of the recipe you want</p>
+        <p className="recipes-text">
+          Write the main ingredient or ingredients of the recipe you want
+        </p>
         <form className="search-form" onSubmit={getQuery} >
           <input
             className="search-bar"
@@ -58,7 +59,12 @@ const Recipes = () => {
             onChange={updateSearch}
             aria-required="true"
             required></input>
-          <button className="search-button" type="submit" data-testid="search-button" >Search</button>
+          <button
+            className="search-button"
+            type="submit"
+            data-testid="search-button"
+            >Search
+          </button>
         </form>
         {recipes && recipes.length > 0 ?
           <ul className="row list-recipes" data-testid="recipe-list">
@@ -75,7 +81,6 @@ const Recipes = () => {
             }
           </ul> : <span className="loading" data-testid="loading">{results}</span>
           }
-
       </section>
     </main>
   );

@@ -2,10 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Modal, Button } from 'react-bootstrap';
 import { addFavoriteRecipe, deleteFavoriteRecipe } from '../../actions';
+import './ModalRecipe.css';
 import Comments from '../Comments/Comments';
 
 const ModalRecipe = (props) => {
-  const { id, title, image, ingredients, url, comment, comments, showModal, handleCloseModal } = props;
+  const { id,
+    title,
+    image,
+    ingredients,
+    url,
+    comment,
+    comments,
+    showModal,
+    handleCloseModal } = props;
 
   const addRecipe = (e) => {
     props.addFavoriteRecipe({
@@ -33,9 +42,9 @@ const ModalRecipe = (props) => {
       </Modal.Header>
       <Modal.Body>
         <div className="img-modal">
-          <img src={image} alt={title} />
+          <img className="modal-image-recipe" src={image} alt={title} />
         </div>
-        <h4>Ingredients</h4>
+        <h4 className="m-3">Ingredients</h4>
         <ul className="modal-recipe-list">
           { ingredients &&
             ingredients.map((ingredient, index) => (
@@ -45,18 +54,18 @@ const ModalRecipe = (props) => {
             ))
           }
         </ul>
-        <h4>Recipe</h4>
-        <a href={url} target="blank" >Visit the recipe website </a>
+        <h4 className="m-3">Recipe</h4>
+        <a className="m-3 mt-1" href={url} target="blank" >Visit the recipe website </a>
         {
           comment && <Comments id={id} comments={comments}/>
         }
 
       </Modal.Body>
       <Modal.Footer>
-        <Button data-testid="close-modal" onClick={handleCloseModal} >Close</Button>
+        <Button className="close-button" data-testid="close-modal" onClick={handleCloseModal} >Close</Button>
         {
-          comment ? <Button data-testid="delete-button" onClick={() => deleteRecipe(id)}>Delete Recipe</Button>:
-          <Button data-testid="add-button" onClick={addRecipe}>Add Favorites</Button>
+          comment ? <Button className="add-delete-button" data-testid="delete-button" onClick={() => deleteRecipe(id)}>Delete Recipe</Button>:
+          <Button className="add-delete-button" data-testid="add-button" onClick={addRecipe}>Add Favorites</Button>
         }
       </Modal.Footer>
     </Modal>

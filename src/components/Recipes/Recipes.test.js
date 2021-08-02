@@ -14,17 +14,6 @@ describe("Test the search button", () => {
     expect(getByTestId("search-button")).toBeTruthy();
     expect(getByText('Search')).toBeTruthy();
   });
-
-  // test('Validate click and the return of the api', () => {
-  //   const { getByTestId } = render(<Recipes />);
-  //   fireEvent.click(getByTestId('search-button'));
-  //   expect(getByTestId('recipe-list')).toBeTruthy();
-  // })
-
-  // test("Validate click in the search button", () => {
-  //   const { getByTestId } = render(<Recipes />);
-  //   expect(getByTestId("search-button")).toBeTruthy();
-  // })
 });
 
 describe("Test input in the search bar", () => {
@@ -33,7 +22,7 @@ describe("Test input in the search bar", () => {
     expect(getByTestId("search-bar")).toBeTruthy();
   });
 
-  test("Validate input onChange and loading", () => {
+  test("Validate search and loading", () => {
     const { getByTestId } = render(<Recipes />);
     const input = getByTestId('search-bar');
     fireEvent.change(input, { target: { value: "chicken"}});

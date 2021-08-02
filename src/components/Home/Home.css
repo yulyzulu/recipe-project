@@ -1,0 +1,31 @@
+/* Home */
+
+.header-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.home-section {
+  margin: 10px;
+}
+
+.promo-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text-promo {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.image-lunch {
+  width: 50%;
+  border-radius: 20%;
+}

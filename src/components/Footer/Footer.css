@@ -1,0 +1,27 @@
+/* Footer */
+
+.footer {
+  height: 6vh;
+  padding: 5px;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-list-item {
+  list-style: none;
+
+}
+
+.list-item-link {
+  color: white;
+  text-decoration: none;
+}
+
+.list-item-link:hover {
+  color: var(--blue-gray-color);
+}

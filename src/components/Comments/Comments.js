@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import './Comments.css';
 import { addCommentFavoriteRecipe } from '../../actions';
 
 const Comments = (props) => {
@@ -28,7 +29,7 @@ const Comments = (props) => {
 
   return (
     <>
-      <h4>Comments</h4>
+      <h4 className="m-3">Comments</h4>
       {
         comments ?
         <ul>
@@ -39,14 +40,19 @@ const Comments = (props) => {
       }
       <form onSubmit={addCommentToRecipe}>
         <input
-          className="comment-input"
+          className="comment-input ml-3"
           type="texarea"
           placeholder="Write your comment about the recipe"
           value={newComment}
           onChange={inputComment}
           aria-label="comment"
           />
-        <button className="comment-button" type="submit" onClick={addCommentToRecipe}>Add comment</button>
+        <button
+          className="comment-button ml-3"
+          type="submit"
+          onClick={addCommentToRecipe}
+        > Add comment
+        </button>
       </form>
     </>
   );

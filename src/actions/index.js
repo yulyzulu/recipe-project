@@ -1,4 +1,7 @@
-import { ADD_FAVORITE_RECIPE, ADD_COMMENT_FAVORITE_RECIPE, DELETE_FAVORITE_RECIPE } from '../types/actionTypes';
+import { ADD_FAVORITE_RECIPE,
+  ADD_COMMENT_FAVORITE_RECIPE,
+  DELETE_FAVORITE_RECIPE } from '../types/actionTypes';
+
 let recipeId = 0;
 export const addFavoriteRecipe = recipeInfo => ({
   type: ADD_FAVORITE_RECIPE,

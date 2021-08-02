@@ -1,0 +1,18 @@
+/* Favorite Recipes */
+
+.header-favorite-recipes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.favorite-text {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--blue-color);
+  background-color:var(--gray-color);
+}

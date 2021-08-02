@@ -1,4 +1,6 @@
-import { ADD_FAVORITE_RECIPE, ADD_COMMENT_FAVORITE_RECIPE, DELETE_FAVORITE_RECIPE } from '../types/actionTypes';
+import { ADD_FAVORITE_RECIPE,
+  ADD_COMMENT_FAVORITE_RECIPE,
+  DELETE_FAVORITE_RECIPE } from '../types/actionTypes';
 
 const reducer = (state, action) => {
   switch (action.type) {

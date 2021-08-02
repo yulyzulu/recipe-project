@@ -1,4 +1,4 @@
-import { render, fireEvent, cleanup } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import Modal from './ModalRecipe';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -26,11 +26,5 @@ describe("Modal Component", () => {
     const modalElement = renderComponentWithRedux(<Modal />, initialState);
     expect(modalElement).toBeTruthy();
   });
-
-  // test("Close modal", () => {
-  //   const { getByTestId } = renderComponentWithRedux(<Modal />, initialState);
-  //   fireEvent.click(getByTestId('close-modal'));
-  //   expect(getByTestId('my-modal')).toBeNull();
-  // });
 
 });
