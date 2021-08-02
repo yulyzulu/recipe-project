@@ -1,4 +1,4 @@
-![](\src\components\assets\static\logo.png)
+![](readme_images\logo.png)
 
 # Cooking flavors
 Cooking flavors is a recipe app. The application allows you to search for all kinds of recipes, to add the recipes you like to favorite recipes, to add comments to favorite recipes and to remove recipes from favorites.
@@ -7,16 +7,16 @@ Cooking flavors is a recipe app. The application allows you to search for all ki
 Cooking flavors platform features:
 
 ### Search recipes
-![](.\src\components\assets\static\recipes.png)
+![](readme_images\recipes.png)
 
 ### View the recipe and add to favorites
-![](src\components\assets\static\add-favorites.png)
+![](readme_images\add-favorites.png)
 
 ### List my favorite recipes
-![](src\components\assets\static\favorites.png)
+![](readme_images\favorites.png)
 
 ### Add comments and delete the recipe
-![](src\components\assets\static\comments-delete.png)
+![](readme_images\comments-delete.png)
 
 ## Requirements
 - To run the program you will need **node** and **npm** installed globally on your machine.
