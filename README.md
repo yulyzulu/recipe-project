@@ -6,21 +6,28 @@ Cooking flavors platform features:
 
 ### Search recipes
 Find all kinds of recipes that you want to prepare.
+
 ![](src/components/assets/static/recipes.png)
+
 
 ### View the recipe and add to favorites
 
 You can see the ingredients, the link to the recipe and you can add the recipe to favorites.
+
 ![](src/components/assets/static/add-favorites.png)
+
 
 ### List my favorite recipes
 
 In my favorite recipes you can find all the recipes you saved.
+
 ![](src/components/assets/static/favorites.png)
+
 
 ### Add comments and delete the recipe
 
 In your favorite recipes you can add comments or if you don't like the recipe, you can delete it.
+
 ![](src/components/assets/static/comments-delete.png)
 
 ## Requirements
