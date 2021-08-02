@@ -7,7 +7,7 @@ Cooking flavors is a recipe app. The application allows you to search for all ki
 Cooking flavors platform features:
 
 ### Search recipes
-![](src\components\assets\static\recipes.png)
+![](.\src\components\assets\static\recipes.png)
 
 ### View the recipe and add to favorites
 ![](src\components\assets\static\add-favorites.png)
