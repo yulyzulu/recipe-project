@@ -1,4 +1,4 @@
-![](src\components\assets\static\logo.png)
+![](\src\components\assets\static\logo.png)
 
 # Cooking flavors
 Cooking flavors is a recipe app. The application allows you to search for all kinds of recipes, to add the recipes you like to favorite recipes, to add comments to favorite recipes and to remove recipes from favorites.
