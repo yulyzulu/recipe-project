@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from '../../reducers';
 
-
 afterEach(cleanup);
 
 const initialState = {
@@ -26,5 +25,4 @@ describe("Modal Component", () => {
     const modalElement = renderComponentWithRedux(<Modal />, initialState);
     expect(modalElement).toBeTruthy();
   });
-
 });

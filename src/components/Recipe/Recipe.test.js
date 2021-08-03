@@ -5,13 +5,6 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from '../../reducers';
 
-// describe("Test the Recipe Component", () => {
-//   test("Check the component exist", () => {
-//     const recipeElement = render(<Recipe />);
-//     expect(recipeElement).toBeTruthy();
-//   });
-// });
-
 afterEach(cleanup);
 
 const initialState = {

@@ -3,13 +3,10 @@
 .recipe-card {
   width: 75%;
   margin: 1.5rem;
-  /* background: var(--gray-color); */
   background: var(--second-color);
+  height: 270px;
+  border-radius: 5px;
 }
-
-/* .recipe-card h3 {
-  color: white;
-} */
 
 .item-recipe {
   list-style: none;

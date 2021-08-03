@@ -10,13 +10,11 @@ const reducer = (state, action) => {
         myFavoriteRecipes: [...state.myFavoriteRecipes, action.payload],
       }
     case DELETE_FAVORITE_RECIPE:
-      console.log('reducer', action.recipeId)
       return {
         ...state,
         myFavoriteRecipes: state.myFavoriteRecipes.filter(item => item.id !== action.recipeId),
       }
     case ADD_COMMENT_FAVORITE_RECIPE:
-      console.log('add comment', action.payload.id);
       return {
         ...state,
         myFavoriteRecipes: state.myFavoriteRecipes.map((recipe) => recipe.id === action.payload.id ?

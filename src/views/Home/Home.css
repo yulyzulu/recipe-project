@@ -23,9 +23,25 @@
   justify-content: center;
   color: var(--main-color);
   text-align: center;
+  flex-direction: column;
 }
 
 .image-lunch {
   width: 50%;
   border-radius: 20%;
+}
+
+.tab-link {
+  color: var(--main-color);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--gray-color);
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tab-link:hover {
+  color: var(--blue-color);
 }

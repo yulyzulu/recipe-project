@@ -5,13 +5,11 @@ import { addCommentFavoriteRecipe } from '../../actions';
 
 const Comments = (props) => {
   const { id, comments } =  props;
-  console.log(id, comments)
 
   const [newComment, setNewComment] = useState('');
 
   const inputComment = (e) => {
     setNewComment(e.target.value);
-    //console.log(newComment);
   }
 
   const addCommentToRecipe = (e) => {
@@ -23,7 +21,6 @@ const Comments = (props) => {
         comment: newComment,
       });
       setNewComment('');
-      //console.log(comments)
     }
   };
 
@@ -32,7 +29,7 @@ const Comments = (props) => {
       <h4 className="m-3">Comments</h4>
       {
         comments ?
-        <ul>
+        <ul data-testid="comments-list">
           {comments.map((comment, index) => (
             <li key={index}>{comment}</li>
           ))}
@@ -42,7 +39,7 @@ const Comments = (props) => {
         <input
           className="comment-input ml-3"
           type="texarea"
-          placeholder="Write your comment about the recipe"
+          placeholder="Write how you improved the recipe for next time"
           value={newComment}
           onChange={inputComment}
           aria-label="comment"
@@ -51,6 +48,7 @@ const Comments = (props) => {
           className="comment-button ml-3"
           type="submit"
           onClick={addCommentToRecipe}
+          data-testid="btn-add-comment"
         > Add comment
         </button>
       </form>

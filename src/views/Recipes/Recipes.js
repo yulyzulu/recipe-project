@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import Recipe from '../Recipe/Recipe';
+import Recipe from '../../components/Recipe/Recipe';
 import './Recipes.css';
-import { APP_ID, APP_KEY } from '../keys';
+import { APP_ID, APP_KEY } from '../../components/keys';
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -21,10 +21,8 @@ const Recipes = () => {
     try {
       const result = await Axios.get(url);
       setRecipes(result.data.hits);
-      console.log(recipes);
     }
     catch (error) {
-      console.log('Error', error.message);
       setResults('Error')
     }
   };

@@ -12,7 +12,8 @@ describe('Actions test', () => {
       url: 'http://www.seriouseats.com/recipes/2008/04/essentials-how-to-cook-rice.html',
       comment: true,
       comments: [],
-    }
+    };
+
     const expectedAction = {
       type: ADD_FAVORITE_RECIPE,
       payload: {
@@ -37,6 +38,7 @@ describe('Actions test', () => {
       comments: [],
       comment:'Add onions'
     };
+
     const expectedAction = {
       type: ADD_COMMENT_FAVORITE_RECIPE,
       payload: recipeInfo

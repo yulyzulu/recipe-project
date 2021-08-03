@@ -11,10 +11,10 @@ const initialState = {
 describe('Test reducer Add', () => {
   test('Add Favorite Reducer', () => {
     const recipeInfo = {
-      title: 'rice',
-      image: 'wwww...png',
-      ingredients: ['oil', 'rice', 'onion', 'salt'],
-      url: 'www',
+      title: 'Rice',
+      image: 'https://www.edamam.com/web-img/b71/b716942f16e3e9490829f7da8dba509e.jpg',
+      ingredients: ['1 cup long-grain white rice', '1 3/4 cup water', 'Pinch of salt', 'Glug of olive oil'],
+      url: 'http://www.seriouseats.com/recipes/2008/04/essentials-how-to-cook-rice.html',
       comment: true,
       comments: []
     };
@@ -31,10 +31,10 @@ describe('Test Delete recipe', () => {
           id: 1,
           recipeInfo:
           {
-            title: 'rice',
-            image: 'wwww...png',
-            ingredients: ['oil', 'rice', 'onion', 'salt'],
-            url: 'www',
+            title: 'Rice',
+            image: 'https://www.edamam.com/web-img/b71/b716942f16e3e9490829f7da8dba509e.jpg',
+            ingredients: ['1 cup long-grain white rice', '1 3/4 cup water', 'Pinch of salt', 'Glug of olive oil'],
+            url: 'http://www.seriouseats.com/recipes/2008/04/essentials-how-to-cook-rice.html',
             comment: true,
             comments: []
           }
@@ -54,10 +54,10 @@ describe('Test add comment', () => {
           id: 1,
           recipeInfo:
           {
-            title: 'rice',
-            image: 'wwww...png',
-            ingredients: ['oil', 'rice', 'onion', 'salt'],
-            url: 'www',
+            title: 'Rice',
+            image: 'https://www.edamam.com/web-img/b71/b716942f16e3e9490829f7da8dba509e.jpg',
+            ingredients: ['1 cup long-grain white rice', '1 3/4 cup water', 'Pinch of salt', 'Glug of olive oil'],
+            url: 'http://www.seriouseats.com/recipes/2008/04/essentials-how-to-cook-rice.html',
             comment: true,
             comments: []
           }
@@ -73,14 +73,14 @@ describe('Test add comment', () => {
           id: 1,
           recipeInfo:
           {
-            title: 'rice',
-            image: 'wwww...png',
-            ingredients: ['oil', 'rice', 'onion', 'salt'],
-            url: 'www',
+            title: 'Rice',
+            image: 'https://www.edamam.com/web-img/b71/b716942f16e3e9490829f7da8dba509e.jpg',
+            ingredients: ['1 cup long-grain white rice', '1 3/4 cup water', 'Pinch of salt', 'Glug of olive oil'],
+            url: 'http://www.seriouseats.com/recipes/2008/04/essentials-how-to-cook-rice.html',
             comment: true,
             comments: ['Add onions']
           }
         }
-      ]})
+    ]});
   });
 });

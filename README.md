@@ -7,28 +7,28 @@ Cooking flavors platform features:
 ### Search recipes
 Find all kinds of recipes that you want to prepare.
 
-![](src/components/assets/static/recipes.png)
+![](src/assets/static/recipes.png)
 
 
 ### View the recipe and add to favorites
 
 You can see the ingredients, the link to the recipe and you can add the recipe to favorites.
 
-![](src/components/assets/static/add-favorites.png)
+![](src/assets/static/add-favorites.png)
 
 
 ### List my favorite recipes
 
 In my favorite recipes you can find all the recipes you saved.
 
-![](src/components/assets/static/favorites.png)
+![](src/assets/static/favorites.png)
 
 
 ### Add comments and delete the recipe
 
 In your favorite recipes you can add comments or if you don't like the recipe, you can delete it.
 
-![](src/components/assets/static/comments-delete.png)
+![](src/assets/static/comments-delete.png)
 
 ## Requirements
 - To run the program you will need **node** and **npm** installed globally on your machine.
@@ -77,6 +77,18 @@ The application was developed with ReactJs.
 - Redux was used to handle the state.
 - Bootstrap was used to give some styles.
 - Axios was used for the API call.
+
+## Testing
+Code coverage report for All files above 60%.
+
+![](src/assets/static/testing.png)
+
+
+## Accessibility
+Lighthouse Accessibility 100%.
+
+![](src/assets/static/accessibility.png)
+
 
 ## Author
 - Yulieth Zuluaga [Github](https://github.com/yulyzulu) [LinkedIn](https://www.linkedin.com/in/yuliethzuluaga/)

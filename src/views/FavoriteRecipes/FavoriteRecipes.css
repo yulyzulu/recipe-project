@@ -15,4 +15,6 @@
   font-size: 1.2rem;
   color: var(--blue-color);
   background-color:var(--gray-color);
+  border-radius: 10px;
+  padding: 10px;
 }

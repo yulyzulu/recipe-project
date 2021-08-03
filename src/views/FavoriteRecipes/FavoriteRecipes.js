@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Recipe from '../Recipe/Recipe';
+import Recipe from '../../components/Recipe/Recipe';
 import './FavoriteRecipes.css';
 
 const FavoriteRecipes = (props) => {
 
   const { myFavoriteRecipes } = props;
-  console.log(myFavoriteRecipes);
 
   return (
     <main className="container main">
@@ -19,7 +18,7 @@ const FavoriteRecipes = (props) => {
           </h2>
         </header>
         { myFavoriteRecipes && myFavoriteRecipes.length > 0 ?
-        <ul className="row list-recipes">
+        <ul data-testid="favorite-recipes" className="row list-recipes">
             {
               myFavoriteRecipes.map((recipe) => (
                 <li className="col-sm-1 col-md-3 item-recipe" key={recipe.id} >
@@ -35,7 +34,7 @@ const FavoriteRecipes = (props) => {
               </li>
               ))
             }
-        </ul> : <p className="favorite-text col-6 offset-3 ">At the moment you do not have favorite recipes, go to recipes and add the recipes that you love!</p>
+        </ul> : <p data-testid="not-recipes" className="favorite-text col-6 offset-3 ">At the moment you do not have favorite recipes, go to recipes and add the recipes that you love!</p>
         }
       </section>
     </main>

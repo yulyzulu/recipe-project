@@ -1,8 +1,8 @@
-import '../App.css';
+import '../assets/styles/App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from '../components/Home/Home';
-import Recipes from '../components/Recipes/Recipes';
-import FavoriteRecipes from '../components/FavoriteRecipes/FavoriteRecipes';
+import Home from '../views/Home/Home';
+import Recipes from '../views/Recipes/Recipes';
+import FavoriteRecipes from '../views/FavoriteRecipes/FavoriteRecipes';
 import Layout from '../components/Layout/Layout';
 import NotFound from '../components/NotFound/NotFound';
 

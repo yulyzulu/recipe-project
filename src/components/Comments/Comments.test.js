@@ -31,5 +31,5 @@ describe("Comments Component", () => {
     const input = getByLabelText('comment');
     fireEvent.change(input, { target: { value: "Add onions"}});
     expect(input.value).toBe("Add onions");
-  })
+  });
 });
